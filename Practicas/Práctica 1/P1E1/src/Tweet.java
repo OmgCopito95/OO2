@@ -22,10 +22,6 @@ public class Tweet {
         return texto;
     }
 
-    public void setTexto(String texto) {
-        this.texto = texto;
-    }
-
     /**
      * Devuelve una cadena con los datos del tweet
      */

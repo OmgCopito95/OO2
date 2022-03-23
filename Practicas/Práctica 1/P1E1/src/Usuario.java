@@ -32,24 +32,8 @@ public class Usuario {
      * 
      * @param tweet
      */
-    public void addTweet(Tweet tweet) {
+    private void addTweet(Tweet tweet) {
         listaTweets.add(tweet);
-    }
-
-    /**
-     * Elimina un tweet de la lista de tweets del usuario
-     * 
-     * @param tweet
-     */
-    public void removeTweet(Tweet tweet) {
-        listaTweets.remove(tweet);
-    }
-
-    /**
-     * Devuelve una cadena con los datos del usuario
-     */
-    public String toString() {
-        return screenName;
     }
 
     /**

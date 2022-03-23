@@ -39,7 +39,7 @@ public class Twitter {
      * @return true si existe, false en caso contrario
      */
     //
-    public Boolean existeUsuario(String screenName) {
+    private Boolean existeUsuario(String screenName) {
         for (Usuario usuario : listaUsuarios) {
             if (usuario.getScreenName().equals(screenName)) {
                 return true;
@@ -53,7 +53,7 @@ public class Twitter {
      * 
      * @param usuario
      */
-    public void removeUsuario(Usuario usuario) {
+    private void removeUsuario(Usuario usuario) {
         listaUsuarios.remove(usuario);
     }
 
@@ -80,7 +80,7 @@ public class Twitter {
      * @param screenName
      * @return el usuario si lo encuentra, null en caso contrario
      */
-    public Usuario buscarUsuario(String screenName) {
+    private Usuario buscarUsuario(String screenName) {
         // busca el usuario en la lista de usuarios
         for (Usuario u : listaUsuarios) {
             if (u.getScreenName().equals(screenName)) {

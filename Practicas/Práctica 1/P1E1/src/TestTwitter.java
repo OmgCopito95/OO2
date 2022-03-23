@@ -9,7 +9,7 @@ public class TestTwitter {
         // el test verifica si existe o no un usuario con el screenName indicado
         Twitter twitter = new Twitter();
 
-        Usuario usuario1 = twitter.addUsuario("juan");
+        twitter.addUsuario("juan");
 
         assertEquals(null, twitter.addUsuario("juan")); // el resultado esperado es false porque ya existe el usuario
     }
@@ -21,7 +21,6 @@ public class TestTwitter {
 
         Usuario usuario1 = twitter.addUsuario("juan");
         Usuario usuario2 = twitter.addUsuario("pedro");
-        Usuario usuario3 = twitter.addUsuario("maria");
 
         usuario1.twittear("hola1");
         usuario1.twittear("hola2");
