@@ -1,26 +1,35 @@
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
 public class TestTwitter {
-    @Test
 
+    Twitter twitter;
+    Usuario usuario1;
+    Usuario usuario2;
+
+    @Before
+    public void setUp() {
+        twitter = new Twitter();
+        usuario1 = new Usuario("juan");
+        usuario2 = new Usuario("pedro");
+    }
+
+
+    @Test
     public void testUsuarioExistente() {
-        // el test verifica si existe o no un usuario con el screenName indicado
-        Twitter twitter = new Twitter();
 
         twitter.addUsuario("juan");
-
         assertEquals(null, twitter.addUsuario("juan")); // el resultado esperado es false porque ya existe el usuario
     }
 
     @Test
     public void TestEliminarUsuarioYSusTweets() {
         // el test verifica si se elimina un usuario y sus tweets
-        Twitter twitter = new Twitter();
 
-        Usuario usuario1 = twitter.addUsuario("juan");
-        Usuario usuario2 = twitter.addUsuario("pedro");
+        usuario1 = twitter.addUsuario("juan");
+        usuario2 = twitter.addUsuario("pedro");
 
         usuario1.twittear("hola1");
         usuario1.twittear("hola2");
