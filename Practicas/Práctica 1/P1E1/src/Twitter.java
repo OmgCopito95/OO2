@@ -1,5 +1,4 @@
 
-
 import java.util.ArrayList;
 
 public class Twitter {
@@ -24,9 +23,10 @@ public class Twitter {
      * @return true si se ha añadido el usuario, false en caso contrario
      */
     public Usuario addUsuario(String screenName) {
-        if (!this.existeUsuario(screenName)) { // si no existe el usuario lo agrega
-            listaUsuarios.add(new Usuario(screenName));
-            return listaUsuarios.get(listaUsuarios.size() - 1);
+        Usuario u = this.existeUsuario(screenName);
+        if ( u != null) { // si no existe el usuario lo agrega
+            listaUsuarios.add(u);
+            return u;
         } else {
             return null;
         }
@@ -38,14 +38,8 @@ public class Twitter {
      * @param screenName
      * @return true si existe, false en caso contrario
      */
-    //
-    private Boolean existeUsuario(String screenName) {
-        for (Usuario usuario : listaUsuarios) {
-            if (usuario.getScreenName().equals(screenName)) {
-                return true;
-            }
-        }
-        return false;
+    private Usuario existeUsuario(String screenName) {
+        return this.listaUsuarios.stream().filter(u -> u.seLlama(screenName)).findFirst().orElse(null);
     }
 
     /**
@@ -63,31 +57,9 @@ public class Twitter {
      * @param screenName
      * @return true si se ha eliminado el usuario, false en caso contrario
      */
-    public boolean eliminarUsuario(Usuario usuario) {
-        if (usuario != null) {
-            usuario.getListaTweets().clear();
-            this.removeUsuario(usuario);
-            return true;
-        } else {
-            return false;
-        }
-    }
-
-    @Deprecated
-    /**
-     * Busca un usuario en la lista de usuarios del twitter
-     * 
-     * @param screenName
-     * @return el usuario si lo encuentra, null en caso contrario
-     */
-    private Usuario buscarUsuario(String screenName) {
-        // busca el usuario en la lista de usuarios
-        for (Usuario u : listaUsuarios) {
-            if (u.getScreenName().equals(screenName)) {
-                return u;
-            }
-        }
-        return null;
+    public void eliminarUsuario(Usuario usuario) { //esta medio raro esto, pero dejarlo asi
+        usuario.eliminarTweets();
+        this.removeUsuario(usuario);
     }
 
 }

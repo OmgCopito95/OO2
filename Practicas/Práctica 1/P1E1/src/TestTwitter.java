@@ -1,3 +1,6 @@
+
+
+
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Before;
@@ -42,5 +45,10 @@ public class TestTwitter {
         assertEquals(false, twitter.getListaUsuarios().contains(usuario1));
         assertEquals(true, usuario1.getListaTweets().isEmpty());
     }
+
+    // Falta hacer:
+    // Cada usuario conoce todos los Tweets que hizo.
+    // Twitter debe conocer a todos los usuarios del sistema.
+    // Los tweets deben tener un texto de 1 carácter como mínimo y 140 caracteres como máximo.
 
 }

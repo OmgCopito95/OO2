@@ -13,6 +13,10 @@ public class Tweet {
      * 
      * @param texto
      */
+    public Tweet(String texto) {
+        this.texto = texto;
+    }
+
     public Tweet(String texto, Tweet origen) {
         this.texto = texto;
         this.origen = origen;
