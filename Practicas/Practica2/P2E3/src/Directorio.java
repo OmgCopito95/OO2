@@ -2,8 +2,6 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.lang.model.util.ElementScanner14;
-
 public class Directorio {
 
     private String nombre;
@@ -49,6 +47,23 @@ public class Directorio {
         return this.tamano;
     }
 
+    private boolean tieneArchivos() {
+        return this.getArchivos().size() != 0;
+    }
+
+    private boolean tieneDirectorios() {
+        return this.getDirectorios().size() != 0;
+    }
+
+    public List<Archivo> getArchivos() {
+        return this.archivos;
+    }
+
+    public List<Directorio> getDirectorios() {
+        return this.directorios;
+    }
+
+
     /**
      * Retorna el espacio total ocupado, incluyendo su contenido.
      */
@@ -87,22 +102,7 @@ public class Directorio {
         return suma;
     }
 
-    private boolean tieneArchivos() {
-        return this.getArchivos().size() != 0;
-    }
-
-    private boolean tieneDirectorios() {
-        return this.getDirectorios().size() != 0;
-    }
-
-    public List<Archivo> getArchivos() {
-        return this.archivos;
-    }
-
-    public List<Directorio> getDirectorios() {
-        return this.directorios;
-    }
-
+    
     /**
      * Retorna el archivo con mayor cantidad de bytes en cualquier nivel del
      * filesystem contenido por directorio receptor
