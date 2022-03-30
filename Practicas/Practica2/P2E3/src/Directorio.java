@@ -6,7 +6,6 @@ public class Directorio {
 
     private String nombre;
     private LocalDate fecha;
-    private String contenido;
     private int tamano = 32;
 
     // tiene una lista de archivos
