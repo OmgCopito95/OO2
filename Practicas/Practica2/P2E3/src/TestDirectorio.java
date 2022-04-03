@@ -51,6 +51,7 @@ public class TestDirectorio {
         conSubdirectorios.agregar(postgres);
     }
 
+    
     @Test
     public void testArchivoMasGrande() {
         assertEquals(null, vacio.archivoMasGrande());
@@ -65,8 +66,8 @@ public class TestDirectorio {
         assertEquals("config.bak", conUnArchivo.archivoMasNuevo().getNombre());
         assertEquals(grande, conVariosArchivos.archivoMasNuevo());
         assertEquals(backup2015, conSubdirectorios.archivoMasNuevo());
-    } 
-
+    }
+    
     @Test
     public void testTamanoTotalOcupado() {
         assertEquals(32, vacio.tamanoTotalOcupado());
