@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\Julieta\\Desktop\\json-simple-1.1.1.jar",
+        "c:\\Users\\Julieta\\Documents\\GitHub\\OO2\\Practicas\\Practica1\\json-simple-1.1.1.jar"
+    ]
+}
