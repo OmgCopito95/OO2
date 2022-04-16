@@ -3,12 +3,13 @@ public class Dispositivo {
     private Connection connection;
     private Display display;
     private Ringer ringer;
-    private CRC16_Calculator crcCalculator;
+    // private CRC16_Calculator crcCalculator;
+    private CRC_Calculator crcCalculator;
 
     public Dispositivo() {
         this.display = new Display();
         this.ringer = new Ringer();
-        this.crcCalculator = new CRC16_Calculator(); //lo dejo para probar el adapter
+        // this.crcCalculator = new CRC16_Calculator(); //lo dejo para probar el adapter
     }
 
     // // ------ Métodos de la interfaz Connection ------
@@ -39,7 +40,8 @@ public class Dispositivo {
         return this.display.showBanner(this.connection.pict());
     }
 
-    public void configurarCRC() {
-
+    public String configurarCRC(CRC_Calculator c) {
+        this.crcCalculator = c;
+        return "CRC configurado";
     }
 }

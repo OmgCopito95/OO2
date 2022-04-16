@@ -14,6 +14,8 @@ public class TestDispositivo {
 
     @Test
     public void testSend() {
+        d.configurarCRC(new CRC32_Calculator());
+
         d.conectarCon(new WifiConn());
         assertEquals("transmitiendo datos wifi", d.send("hola"));
         d.conectarCon(new g4Adapter());
@@ -28,7 +30,8 @@ public class TestDispositivo {
 
     @Test
     public void testConfigurarCRC() {
-        // d.configurarCRC();
+        assertEquals("CRC configurado", d.configurarCRC(new CRC16_Calculator()));
+        assertEquals("CRC configurado", d.configurarCRC(new CRC32_Calculator()));
     }
 
 

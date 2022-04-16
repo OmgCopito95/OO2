@@ -1,4 +1,4 @@
-public class CRC16_Calculator {
+public class CRC16_Calculator implements CRC_Calculator {
 
     public Integer crcFor(String datos) {
         int crc = 0xFFFF;
