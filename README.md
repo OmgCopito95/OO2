@@ -2,7 +2,7 @@
 <div align="center">  
   <p Materia OO2</p>
   <p align="center">
-     (Cursando Actualmente...) <br><br> Contenido de la materia de Orientación a Objetos 2 de la <strong> Facultad de Informática UNLP :computer: </strong>
+      <br><br> Contenido de la materia de Orientación a Objetos 2 de la <strong> Facultad de Informática UNLP :computer: </strong>
   </p>
   <sub>
     :boom: PUEDEN HABER ERRORES :exclamation: :exclamation:
