@@ -1,4 +1,4 @@
-package ar.edu.info.unlp.ejercicio1;
+package ar.edu.info.unlp.ejercicioDemo;
 
 /**
  * De esta forma crearemos las clases del ejercicio

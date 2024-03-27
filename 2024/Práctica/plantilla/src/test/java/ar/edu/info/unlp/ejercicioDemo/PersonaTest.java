@@ -1,9 +1,13 @@
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.BeforeEach;
+package ar.edu.info.unlp.ejercicioDemo;
+
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
-import ar.edu.info.unlp.ejercicio1.Persona;
-
+/**
+ * Aca escribiremos los test de unidad para cada clase 
+ * 
+ */
 public class PersonaTest {
 	
 	Persona james, guido;
@@ -16,6 +20,7 @@ public class PersonaTest {
 		james.setNombre("James");
 		guido.setApellido("van Rossum");
 		guido.setNombre("Guido");
+		
 	}
 	
     @Test
