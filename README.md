@@ -11,7 +11,7 @@
   
   ---
   
-  <!-- <b><a href="https://juli-guias.notion.site/OO2-Orientaci-n-a-Objetos-2-d3f61f63c7f94ccbb956dec305d6152e" target="_blank">✨ Resumen Teórico ✨</a></b> -->
+  <b><a href="https://julietalanciotti.notion.site/OO2-Orientaci-n-a-Objetos-2-d3f61f63c7f94ccbb956dec305d6152e?pvs=4" target="_blank">✨ Resumen Teórico ✨</a></b>
 
   <hr>
 </div>
