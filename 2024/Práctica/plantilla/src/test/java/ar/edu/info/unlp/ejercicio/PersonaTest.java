@@ -1,8 +1,10 @@
-package ar.edu.info.unlp.ejercicioDemo;
+package ar.edu.info.unlp.ejercicio;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+import ar.edu.info.unlp.ejercicio.Persona;
 
 /**
  * Aca escribiremos los test de unidad para cada clase 
