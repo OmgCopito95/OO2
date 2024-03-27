@@ -1,12 +1,9 @@
 
 
 
-import static org.junit.Assert.assertEquals;
+import org.junit.jupiter.api.Test;
 
-import org.junit.Before;
-import org.junit.Test;
-
-public class TestTwitter {
+public class TwitterTest {
 
     Twitter twitter;
     Usuario usuario1;
