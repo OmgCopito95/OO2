@@ -23,11 +23,21 @@ public class TwitterTest {
     }
 
     @Test
+    public void TestTwittear() {
+        // el test verifica si se crea un tweet correctamente
+
+        twitter.addUsuario(usuario1);
+        usuario1.twittear("hola");
+
+        assertEquals(1, usuario1.getListaTweets().size());
+    }
+
+    @Test
     public void TestEliminarUsuarioYSusTweets() {
         // el test verifica si se elimina un usuario y sus tweets
 
-        usuario1 = twitter.addUsuario("juan");
-        usuario2 = twitter.addUsuario("pedro");
+        twitter.addUsuario(usuario1);
+        twitter.addUsuario(usuario2);
 
         usuario1.twittear("hola1");
         usuario1.twittear("hola2");
@@ -40,6 +50,9 @@ public class TwitterTest {
         assertEquals(false, twitter.getListaUsuarios().contains(usuario1));
         assertEquals(true, usuario1.getListaTweets().isEmpty());
     }
+
+    
+
 
     // Falta hacer:
     // Cada usuario conoce todos los Tweets que hizo.
